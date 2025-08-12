@@ -57,7 +57,7 @@
 &kp TAB     &ht_tp LG(Q) Q  &ht_tp LG(W) W     &kp E           &kp R                &ht_tp LG(T) T                                              &kp Y           &kp U                &kp I          &kp O              &ht_tp LG(P) P                  &kp LEFT_BRACKET
 &kp ESCAPE  &ht_tp LCTRL A  &ht_tp LEFT_ALT S  &ht_tp LCMD D   &ht_tp LEFT_SHIFT F  &kp G                                                       &kp H           &ht_tp LEFT_SHIFT J  &ht_tp LCMD K  &ht_tp LEFT_ALT L  &ht_tp RIGHT_CONTROL SEMICOLON  &kp SQT
 &kp LSHFT   &ht_tp LG(Z) Z  &ht_tp LG(X) X     &ht_tp LG(C) C  &ht_tp LG(V) V       &kp B           &kp C_MUTE               &none              &ht_tp LG(N) N  &kp M                &kp COMMA      &kp DOT            &kp FSLH                        &kp RSHFT
-                            &kp LGUI           &kp LALT        &kp LCTRL            &lt 1 ENTER     &ht_tp LGUI BACKSPACE    &ht_tp RGUI SPACE  &mo 1           &kp RCTRL            &kp RALT       &kp RGUI
+                            &kp LGUI           &kp LALT        &mo 2                &lt 1 ENTER     &ht_tp LGUI BACKSPACE    &ht_tp RGUI SPACE  &mo 1           &kp RCTRL            &kp RALT       &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -75,11 +75,11 @@
             //               |     |      |      |      |        |  |       |      |       |       |      |
 
             bindings = <
-&trans     &kp LS(LG(NUMBER_1))  &kp LS(LG(F2))  &kp LS(LG(F3))    &kp LG(LS(F4))     &kp LS(LG(NUMBER_5))                    &kp F6     &kp F7     &kp F8     &kp F9     &kp F10        &kp F11
-&kp GRAVE  &kp LEFT_BRACE        &kp RBRC        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PIPE                                &trans     &kp EQUAL  &trans     &kp PLUS   &kp LS(LG(P))  &kp PIPE
-&trans     &kp EXCLAMATION       &kp AT          &kp HASH          &kp DLLR           &kp PRCNT                               &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR       &kp MINUS
-&trans     &kp BACKSLASH         &trans          &trans            &trans             &trans                &trans    &trans  &trans     &trans     &kp SEMI   &kp COLON  &kp BSLH       &trans
-                                 &trans          &trans            &trans             &trans                &trans    &trans  &trans     &trans     &trans     &trans
+&trans     &kp LS(LG(NUMBER_1))  &kp LS(LG(NUMBER_2))  &kp LS(LG(NUMBER_3))  &kp LG(LS(NUMBER_4))  &kp LS(LG(NUMBER_5))                    &kp F6     &kp F7     &kp F8          &kp F9     &kp F10        &kp F11
+&kp GRAVE  &kp LEFT_BRACE        &kp RBRC              &kp LEFT_BRACKET      &kp RIGHT_BRACKET     &kp PIPE                                &trans     &kp EQUAL  &kp UNDERSCORE  &kp PLUS   &kp LS(LG(P))  &kp PIPE
+&trans     &kp EXCLAMATION       &kp AT                &kp HASH              &kp DLLR              &kp PRCNT                               &kp CARET  &kp AMPS   &kp ASTRK       &kp LPAR   &kp RPAR       &kp MINUS
+&trans     &kp BACKSLASH         &trans                &trans                &trans                &trans                &trans    &trans  &trans     &trans     &kp SEMI        &kp COLON  &kp BSLH       &trans
+                                 &trans                &trans                &trans                &trans                &trans    &trans  &trans     &trans     &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
