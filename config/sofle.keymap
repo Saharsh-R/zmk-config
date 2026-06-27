@@ -38,10 +38,11 @@
             #binding-cells = <1>;
             wait-ms = <40>;
             tap-ms = <40>;
-            bindings
-                = <&macro_tap &kp LC(A)>
-                , <&macro_param_1to1>
-                , <&macro_tap &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_tap>,
+                <&kp LC(A) &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>;
         };
     };
 
@@ -116,6 +117,16 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT          &kp DOWN  &kp UP_ARROW  &kp RIGHT          &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans    &trans        &trans             &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans            &trans    &trans        &trans
+            >;
+        };
+
+        tmux {
+            bindings = <
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &tmux C  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
