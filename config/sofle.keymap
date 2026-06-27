@@ -121,12 +121,22 @@
         };
 
         tmux {
+            display-name = "tmux";
+
+            // Every printable key sends Ctrl+A + that key (the tmux prefix).
+            // ------------------------------------------------------------------------------------------------------------
+            // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   -   |
+            // |       |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   [   |
+            // |       |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+            // |       |  Z  |  X  |  C   |  V   |  B   |        |  |       |  N   |  M    |  ,    |  .   |   /   |       |
+            //                                                              | LEFT | DOWN  |  UP   | RGHT |
+
             bindings = <
-&trans  &trans  &trans  &trans   &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &tmux C  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&tmux GRAVE  &tmux N1  &tmux N2  &tmux N3  &tmux N4  &tmux N5                              &tmux N6    &tmux N7    &tmux N8        &tmux N9     &tmux N0         &tmux MINUS
+&trans       &tmux Q   &tmux W   &tmux E   &tmux R   &tmux T                               &tmux Y     &tmux U     &tmux I         &tmux O      &tmux P          &tmux LEFT_BRACKET
+&trans       &tmux A   &tmux S   &tmux D   &tmux F   &tmux G                               &tmux H     &tmux J     &tmux K         &tmux L      &tmux SEMICOLON  &tmux SQT
+&trans       &tmux Z   &tmux X   &tmux C   &tmux V   &tmux B   &trans              &trans  &tmux N     &tmux M     &tmux COMMA     &tmux DOT    &tmux FSLH       &trans
+                       &trans    &trans    &trans    &trans    &trans              &trans  &tmux LEFT  &tmux DOWN  &tmux UP_ARROW  &tmux RIGHT
             >;
         };
     };
