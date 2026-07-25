@@ -67,7 +67,9 @@
                               &lt 2 LG(LS(V))    &mt LCTRL LC(SPACE)  &mt LALT LA(TAB)     &lt 1 ENTER     &ht_tp LGUI BACKSPACE    &lt 4 SPACE   &lt 1 LEFT      &kp DOWN             &kp UP_ARROW   &kp RIGHT
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings =
+                <&inc_dec_kp LG(PLUS) LG(MINUS)>,
+                <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
