@@ -16,6 +16,12 @@
 #define RAISE 2
 #define ADJUST 3
 
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <175>;
+};
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
