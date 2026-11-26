@@ -1,1 +1,3 @@
 past_builds
+.cache/
+__pycache__/
