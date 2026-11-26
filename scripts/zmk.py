@@ -449,7 +449,8 @@ class Sync:
             out = []
             for k, b in enumerate(dl.bindings):
                 if b.behavior_id not in self.dev_beh:
-                    die(f"unknown behavior id {b.behavior_id}")
+                    out.append(toks[k] if fl else "&none")
+                    continue
                 label, d = self.dev_beh[b.behavior_id]
                 if fl and self.same(toks[k], label, d, b.param1, b.param2):
                     out.append(toks[k])
