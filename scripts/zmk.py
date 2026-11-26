@@ -637,8 +637,8 @@ def cmd_flash(a):
                                 str(tmp / "fw.zip")], check=True, capture_output=True)
     port = (ports(BOOT_VID) or [None])[0]
     if not port:
-        print(f"plug the {a.side} half in by USB and double-tap its reset button...")
-        end = time.time() + 120
+        print(f"plug the {a.side} half in by USB and press the Bootloader key (hold outer left thumb + 6) or double-tap reset...")
+        end = time.time() + 600
         while not port and time.time() < end:
             time.sleep(0.5)
             port = (ports(BOOT_VID) or [None])[0]
