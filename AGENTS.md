@@ -17,5 +17,4 @@ ZMK firmware config for a wireless Sofle (nice!nano v2). The left half is the ce
 - Layer numbers in the file are positions; Studio's layer ids match them only until layers are reordered in Studio.
 - Push over HTTPS. The keychain token is a fine-grained PAT that must include this repo.
 - No reset button needed: the Bootloader key is adjust layer + left shift (hold the outer left thumb a full second first). `&bootloader` reboots the half it's pressed on, so it must stay on a left-half key for `flash left`.
-- Layer-taps are `balanced` (set on `&lt` in the keymap); Studio can't change hold-tap timing, only a flash can.
 - After a serial flash the half can stay in the bootloader (USB vid 0x239a); just run `flash left` again.
