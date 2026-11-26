@@ -637,7 +637,7 @@ def cmd_flash(a):
                                 str(tmp / "fw.zip")], check=True, capture_output=True)
     port = (ports(BOOT_VID) or [None])[0]
     if not port:
-        print(f"plug the {a.side} half in by USB and press the Bootloader key (hold outer left thumb + 6) or double-tap reset...")
+        print(f"plug the {a.side} half in by USB and press the Bootloader key (hold outer left thumb 1s + left shift) or double-tap reset...")
         end = time.time() + 600
         while not port and time.time() < end:
             time.sleep(0.5)
@@ -646,8 +646,15 @@ def cmd_flash(a):
             die("bootloader never showed up")
         time.sleep(1)
     print(f"flashing over {port}...")
-    subprocess.run(nrfutil() + ["dfu", "serial", "--package", str(tmp / "fw.zip"), "-p", port, "-b", "115200",
-                                "--singlebank"], check=True)
+    for attempt in range(3):
+        r = subprocess.run(nrfutil() + ["dfu", "serial", "--package", str(tmp / "fw.zip"), "-p", port, "-b", "115200",
+                                        "--singlebank"], capture_output=True, text=True)
+        if "Device programmed" in r.stdout + r.stderr:
+            break
+        print(f"attempt {attempt + 1} failed: {(r.stdout + r.stderr).strip().splitlines()[-1]}")
+        time.sleep(2)
+    else:
+        die("flash failed 3 times; the half is still in the bootloader, rerun to retry")
     print(f"done: {a.side} half flashed")
 
 
