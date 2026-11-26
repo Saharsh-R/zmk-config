@@ -607,7 +607,7 @@ def find_firmware(a):
                  "--jq", '.[0] | "\\(.databaseId) \\(.status) \\(.conclusion)"').strip()
         if not out or out == "null null null":
             die(f"no CI run found for {sha[:7]}")
-        run, status, _ = out.split()
+        run, status = out.split()[:2]
         if status != "completed":
             print(f"waiting for CI run {run}...")
             gh("run", "watch", run, "--exit-status", "--interval", "15", capture=False)
