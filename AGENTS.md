@@ -18,3 +18,4 @@ ZMK firmware config for a wireless Sofle (nice!nano v2). The left half is the ce
 - Push over HTTPS. The keychain token is a fine-grained PAT that must include this repo.
 - No reset button needed: the Bootloader key is adjust layer + left shift (hold the outer left thumb a full second first). `&bootloader` reboots the half it's pressed on, so it must stay on a left-half key for `flash left`.
 - After a serial flash the half can stay in the bootloader (USB vid 0x239a); just run `flash left` again.
+- The OLEDs don't respond (ssd1306 write errors), and each failed redraw froze the board ~500ms, so fast layer+key presses got lost. `CONFIG_ZMK_DISPLAY=n` in `sofle.conf`; keep it off unless the display hardware is fixed.
