@@ -91,11 +91,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE     &kp N1          &kp N2             &kp N3          &kp N4               &kp N5                                                &kp N6          &kp N7               &kp N8         &kp N9             &kp N0                          &kp MINUS
-&kp TAB       &ht_tp LG(Q) Q  &ht_tp LG(W) W     &kp E           &kp R                &ht_tp LG(T) T                                        &kp Y           &kp U                &kp I          &kp O              &ht_tp LG(P) P                  &kp RIGHT
-&lt 3 ESCAPE  &ht_tp LCTRL A  &ht_tp LEFT_ALT S  &ht_tp LCMD D   &ht_tp LEFT_SHIFT F  &kp G                                                 &kp H           &ht_tp LEFT_SHIFT J  &ht_tp LCMD K  &ht_tp LEFT_ALT L  &ht_tp RIGHT_CONTROL SEMICOLON  &kp SQT
-&kp LSHFT     &ht_tp LG(Z) Z  &ht_tp LG(X) X     &ht_tp LG(C) C  &ht_tp LG(V) V       &kp B           &out OUT_USB             &bt_go_4     &ht_tp LG(N) N  &kp M                &kp COMMA      &kp DOT            &kp FSLH                        &kp RSHFT
-                              &lt (2) LG(LS(V))  &none           &mt (LALT) LA(TAB)   &lt 1 ENTER     &ht_tp LGUI BACKSPACE    &lt 4 SPACE  &lt 1 LEFT      &lt 3 DOWN           &kp UP_ARROW   &kp RIGHT
+&kp GRAVE     &kp N1          &kp N2             &kp N3          &kp N4               &kp N5                                                      &kp N6          &kp N7               &kp N8         &kp N9             &kp N0                          &kp MINUS
+&kp TAB       &ht_tp LG(Q) Q  &ht_tp LG(W) W     &kp E           &kp R                &ht_tp LG(T) T                                              &kp Y           &kp U                &kp I          &kp O              &ht_tp LG(P) P                  &kp RIGHT
+&lt 3 ESCAPE  &ht_tp LCTRL A  &ht_tp LEFT_ALT S  &ht_tp LCMD D   &ht_tp LEFT_SHIFT F  &kp G                                                       &kp H           &ht_tp LEFT_SHIFT J  &ht_tp LCMD K  &ht_tp LEFT_ALT L  &ht_tp RIGHT_CONTROL SEMICOLON  &kp SQT
+&kp LSHFT     &ht_tp LG(Z) Z  &ht_tp LG(X) X     &ht_tp LG(C) C  &ht_tp LG(V) V       &kp B           &out OUT_USB             &bt_go_4           &ht_tp LG(N) N  &kp M                &kp COMMA      &kp DOT            &kp FSLH                        &kp RSHFT
+                              &lt (2) LG(LS(V))  &mo 4           &mo 4                &lt 1 ENTER     &ht_tp LGUI BACKSPACE    &ht_tp LCMD SPACE  &lt 1 LEFT      &lt 4 DOWN           &kp UP_ARROW   &kp RIGHT
             >;
 
             sensor-bindings =
@@ -144,6 +144,8 @@
         };
 
         esc_layer {
+            display-name = "esc";
+
             bindings = <
 &trans  &trans  &trans  &trans  &trans         &trans                               &trans            &trans    &trans        &trans             &trans         &trans
 &trans  &trans  &trans  &trans  &kp LA(LC(R))  &trans                               &kp LG(LA(LEFT))  &trans    &trans        &kp LG(LA(RIGHT))  &kp LA(LC(P))  &trans
